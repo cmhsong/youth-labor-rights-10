@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>청소년 노동인권 10차시 학습지 모음</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* 레이아웃: 왼쪽 차시 목차 + 오른쪽 본문(한 차시씩). 폰에서는 목차가 상단 가로 스크롤 칩으로 바뀜.
+   색: 작업복 초록(primary) + 안전표지 노랑(accent), 서늘한 종이색 바탕. */
+:root{
+  --bg:#F3F5F1; --surface:#FFFFFF; --fg:#17211C; --muted:#5A6660; --line:#D5DCD4;
+  --primary:#1F6E52; --primary-ink:#FFFFFF; --tint:#E4EFE8; --accent:#D99A1E; --accent-ink:#8A5E0B; --accent-tint:#FBF1D9;
+  --warn:#B4432E; --warn-tint:#F9E6E1; --ok:#1F6E52; --code:#EEF1EC;
+  --display:"Hahmlet","Noto Serif KR","Apple SD Gothic Neo",serif;
+  --body:"IBM Plex Sans KR","Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+  --radius:6px; --shadow:0 1px 2px rgba(23,33,28,.06),0 6px 20px -12px rgba(23,33,28,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121715; --surface:#1A211E; --fg:#E6EBE7; --muted:#9AA69F; --line:#2C3531;
+    --primary:#5FBF95; --primary-ink:#0F1A15; --tint:#1C2B24; --accent:#F2B544; --accent-ink:#F2B544; --accent-tint:#2E2816;
+    --warn:#E07A64; --warn-tint:#33201B; --ok:#5FBF95; --code:#222A26;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px -12px rgba(0,0,0,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121715; --surface:#1A211E; --fg:#E6EBE7; --muted:#9AA69F; --line:#2C3531;
+  --primary:#5FBF95; --primary-ink:#0F1A15; --tint:#1C2B24; --accent:#F2B544; --accent-ink:#F2B544; --accent-tint:#2E2816;
+  --warn:#E07A64; --warn-tint:#33201B; --ok:#5FBF95; --code:#222A26;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px -12px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{font-size:16px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.75;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--primary)}
+a{color:var(--primary);text-decoration-thickness:1px;text-underline-offset:3px}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.3;text-wrap:balance;margin:0}
+h1{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;letter-spacing:-.01em}
+h2{font-size:1.45rem;font-weight:700}
+h3{font-size:1.12rem;font-weight:700}
+h4{font-size:1rem;font-weight:700;font-family:var(--body)}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.3em}
+li+li{margin-top:.3em}
+strong{font-weight:700}
+small{font-size:.85em}
+table{border-collapse:collapse;width:100%;font-size:.94rem}
+th,td{text-align:left;vertical-align:top;padding:.55em .7em;border-bottom:1px solid var(--line)}
+th{font-weight:700;background:var(--tint);white-space:nowrap}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.tbl table{min-width:520px}
+.num{font-variant-numeric:tabular-nums}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font-size:.78rem;letter-spacing:.08em;color:var(--muted);font-weight:500}
+.muted{color:var(--muted)}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:var(--radius);padding:.45em 1em;font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:.4em}
+.btn:hover{border-color:var(--primary)}
+.btn.pri{background:var(--primary);color:var(--primary-ink);border-color:var(--primary)}
+.btn[hidden]{display:none}
+
+/* 상단바 */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--primary);color:var(--primary-ink);box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.topbar .in{display:flex;align-items:center;gap:.8rem;padding-block:.6rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.brand{font-family:var(--display);font-weight:700;font-size:1.05rem;color:inherit;text-decoration:none;display:flex;align-items:center;gap:.6rem;min-width:0}
+.brand .mark{width:26px;height:26px;border-radius:50%;background:var(--accent);display:inline-grid;place-items:center;color:#17211C;font-family:var(--body);font-weight:700;font-size:.8rem;flex:none}
+.brand span.t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar .sp{flex:1}
+.mode{display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.2rem .3rem .2rem .8rem;color:inherit;font-size:.85rem}
+.mode button{border:0;border-radius:999px;padding:.25rem .7rem;background:transparent;color:inherit;font-size:.85rem;font-weight:500}
+.mode button[aria-pressed="true"]{background:var(--accent);color:#17211C;font-weight:700}
+
+/* 뼈대 */
+.shell{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);align-self:start;max-height:calc(100vh - 58px);overflow:auto;padding-block:1.5rem 2rem;padding-right:1.2rem;border-right:1px solid var(--line)}
+.side .eyebrow{padding:0 .6rem .4rem}
+.nav{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.nav li{margin:0}
+.nav a{display:flex;gap:.55rem;align-items:baseline;padding:.42rem .6rem;border-radius:var(--radius);color:var(--fg);text-decoration:none;font-size:.93rem;line-height:1.35}
+.nav a .n{font-family:var(--display);font-weight:700;color:var(--muted);font-size:.8rem;min-width:1.6em;font-variant-numeric:tabular-nums}
+.nav a:hover{background:var(--tint)}
+.nav a[aria-current="page"]{background:var(--primary);color:var(--primary-ink)}
+.nav a[aria-current="page"] .n{color:inherit;opacity:.8}
+.nav a.done::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);margin-left:auto;align-self:center;flex:none}
+.nav .sep{height:1px;background:var(--line);margin:.5rem .6rem}
+main{min-width:0;padding-block:2rem 4rem;padding-left:2.2rem;max-width:860px}
+@media (max-width:900px){
+  .shell{display:block}
+  .side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 54px);max-height:none;overflow:visible;border-right:0;border-bottom:1px solid var(--line);padding:.5rem 0;background:var(--bg);z-index:20;margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)))}
+  .side .eyebrow{display:none}
+  .nav{flex-direction:row;overflow-x:auto;gap:.35rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));scrollbar-width:thin}
+  .nav li{flex:none}
+  .nav a{border:1px solid var(--line);border-radius:999px;padding:.3rem .75rem;font-size:.85rem;background:var(--surface);white-space:nowrap}
+  .nav a .lbl{display:none}
+  .nav a .n{min-width:0;font-size:.85rem}
+  .nav li.home a .lbl,.nav li.guide a .lbl{display:inline}
+  .nav .sep{display:none}
+  .nav a.done::after{margin-left:.4rem}
+  main{padding-left:0;padding-block:1.4rem 3rem}
+  .mode span.lbl{display:none}
+}
+
+/* 뷰 공통 */
+.view{display:flex;flex-direction:column;gap:2rem}
+.view[hidden]{display:none}
+.head{display:flex;flex-direction:column;gap:.9rem;padding-bottom:1.4rem;border-bottom:2px solid var(--fg)}
+.head .kicker{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:.35em;font-size:.78rem;font-weight:500;border:1px solid var(--line);border-radius:999px;padding:.1em .7em;background:var(--surface);color:var(--muted)}
+.chip.n{background:var(--fg);color:var(--bg);border-color:var(--fg);font-family:var(--display);font-weight:700}
+.head .sub{font-size:1.05rem;color:var(--muted);max-width:60ch}
+.qbox{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.8rem;align-items:start;background:var(--accent-tint);border-radius:var(--radius);padding:.9rem 1.1rem}
+.qbox .q{font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--accent);line-height:1;margin-top:.15rem}
+.qbox p{font-weight:500}
+.flow{display:flex;gap:3px;border-radius:var(--radius);overflow:hidden;font-size:.78rem;font-weight:500}
+.flow span{flex:var(--w) 1 0;padding:.35em .6em;background:var(--tint);color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums}
+.flow span:nth-child(2){background:var(--primary);color:var(--primary-ink)}
+.flow span:nth-child(3){background:var(--accent-tint)}
+.flowcap{font-size:.78rem;color:var(--muted);margin-top:.3rem}
+section.blk{display:flex;flex-direction:column;gap:.9rem}
+section.blk > h2{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+section.blk > h2 .tag{font-family:var(--body);font-size:.72rem;font-weight:500;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:3px;padding:0 .4em;white-space:nowrap}
+.goals{list-style:none;padding:0;display:grid;gap:.5rem}
+.goals li{display:grid;grid-template-columns:1.4rem 1fr;gap:.4rem;align-items:start}
+.goals li::before{content:"✓";color:var(--primary);font-weight:700;font-size:1rem;line-height:1.7}
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem}
+.term{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.9rem 1rem;display:flex;flex-direction:column;gap:.3rem}
+.term b{font-family:var(--display);font-size:1.02rem}
+.term p{font-size:.92rem;color:var(--muted)}
+.law{background:var(--surface);border-top:3px solid var(--primary);border-bottom:1px solid var(--line);padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.5rem}
+.law .src{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+.law blockquote{margin:0;font-family:var(--display);font-size:1.02rem;line-height:1.75}
+.callout{border-radius:var(--radius);padding:.9rem 1.1rem;display:flex;flex-direction:column;gap:.35rem;background:var(--tint)}
+.callout.warn{background:var(--warn-tint)}
+.callout.warn > b:first-child{color:var(--warn)}
+.callout.acc{background:var(--accent-tint)}
+.callout > b:first-child{font-size:.95rem}
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:.9rem}
+.act .ah{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.act .ah h3{flex:1 1 auto;min-width:0}
+.act .ah .time{font-size:.8rem;color:var(--primary);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.act .how{font-size:.93rem;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:.85rem 1rem;display:flex;flex-direction:column;gap:.5rem;background:var(--bg)}
+.card .lab{font-size:.75rem;font-weight:700;letter-spacing:.06em;color:var(--primary)}
+.card p{font-size:.95rem}
+.card details{font-size:.9rem}
+details summary{cursor:pointer;font-weight:500;color:var(--primary);list-style:none;display:inline-flex;gap:.4em;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"▸";font-size:.8em;transition:transform .15s}
+details[open] summary::before{transform:rotate(90deg)}
+details .d{margin-top:.4rem;padding:.6rem .8rem;background:var(--tint);border-radius:var(--radius);color:var(--fg)}
+details .d.no{background:var(--warn-tint)}
+.verdict{display:inline-block;font-size:.75rem;font-weight:700;border-radius:3px;padding:.05em .5em;margin-right:.3em;vertical-align:middle}
+.verdict.ok{background:var(--tint);color:var(--ok)}
+.verdict.no{background:var(--warn-tint);color:var(--warn)}
+.verdict.mid{background:var(--accent-tint);color:var(--accent-ink)}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:.6rem}
+.steps li{counter-increment:s;display:grid;grid-template-columns:2rem 1fr;gap:.6rem;align-items:start}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;font-size:.85rem;margin-top:.2rem}
+.timeline{list-style:none;padding:0;display:grid;border-left:2px solid var(--line);margin-left:.4rem}
+.timeline li{display:grid;grid-template-columns:4.6rem 1fr;gap:.8rem;padding:.45rem 0 .45rem 1rem;position:relative;margin:0}
+.timeline li::before{content:"";position:absolute;left:-6px;top:1.05rem;width:10px;height:10px;border-radius:50%;background:var(--primary);border:2px solid var(--bg)}
+.timeline .y{font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums;color:var(--primary)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.two > *{min-width:0}
+.links{list-style:none;padding:0;display:grid;gap:.5rem;font-size:.93rem}
+.links li{display:grid;grid-template-columns:1fr;gap:.1rem;padding:.55rem .8rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+.links li a{font-weight:700}
+.links li .u{font-size:.8rem;color:var(--muted);font-family:ui-monospace,Consolas,monospace;word-break:break-all}
+.links li .w{font-size:.88rem;color:var(--muted)}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.7rem}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.8rem 1rem;display:flex;flex-direction:column;gap:.15rem}
+.contact .who{font-size:.8rem;color:var(--muted)}
+.contact .no{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:.01em;color:var(--primary);font-variant-numeric:tabular-nums;user-select:all}
+.contact .what{font-size:.85rem}
+.checklist{list-style:none;padding:0;display:grid;gap:.4rem}
+.checklist li{display:flex;gap:.6rem;align-items:flex-start;padding:.5rem .7rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);margin:0}
+.checklist input{margin-top:.4rem;accent-color:var(--primary);flex:none}
+.checklist label{flex:1;cursor:pointer}
+.checklist .why{display:block;font-size:.85rem;color:var(--muted)}
+.count{font-weight:700;color:var(--primary)}
+
+/* OX 퀴즈 */
+.oxwrap{display:flex;flex-direction:column;gap:.9rem}
+.oxctl{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;font-size:.88rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.5rem .8rem}
+.oxctl label{display:inline-flex;align-items:center;gap:.4em}
+.oxctl select{font:inherit;font-size:.88rem;padding:.2em .4em;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--fg)}
+.oxctl input[type=checkbox]{accent-color:var(--primary)}
+.oxctl .score{margin-left:auto;font-weight:700;color:var(--primary);font-variant-numeric:tabular-nums}
+.oxlist{list-style:none;padding:0;display:grid;gap:.55rem}
+.ox{display:grid;grid-template-columns:1fr auto;gap:.5rem 1rem;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.7rem .95rem;margin:0}
+.ox .st{font-size:.97rem}
+.ox .st .i{font-family:var(--display);font-weight:700;color:var(--primary);margin-right:.45em;font-variant-numeric:tabular-nums}
+.ox .ob{display:flex;gap:.4rem}
+.ox .ob button{width:2.4rem;height:2.4rem;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);font-family:var(--display);font-weight:800;font-size:1.05rem;display:grid;place-items:center}
+.ox .ob button:hover{border-color:var(--primary)}
+.ox .ob button.sel.ok{background:var(--primary);border-color:var(--primary);color:var(--primary-ink)}
+.ox .ob button.sel.no{background:var(--warn);border-color:var(--warn);color:#fff}
+.ox .ob button.ans{border-color:var(--primary);box-shadow:inset 0 0 0 2px var(--primary)}
+.ox .ex{grid-column:1 / -1;font-size:.88rem;padding:.5rem .75rem;border-radius:var(--radius);background:var(--tint)}
+.ox .ex.no{background:var(--warn-tint)}
+.ox .ex b{margin-right:.3em}
+@media (max-width:480px){.ox{grid-template-columns:1fr}.ox .ob{justify-content:flex-end}}
+
+/* 계산기 */
+.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.8rem 1rem;align-items:end}
+.calc label{display:flex;flex-direction:column;gap:.25rem;font-size:.85rem;color:var(--muted);font-weight:500}
+.calc input,.calc select{font:inherit;padding:.45em .6em;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);color:var(--fg);font-variant-numeric:tabular-nums;min-width:0;width:100%}
+.result{display:grid;gap:.3rem;background:var(--tint);border-radius:var(--radius);padding:.9rem 1.1rem}
+.result .row{display:flex;justify-content:space-between;gap:1rem;font-size:.95rem;flex-wrap:wrap}
+.result .row b{font-variant-numeric:tabular-nums}
+.result .total{border-top:1px solid var(--line);padding-top:.5rem;margin-top:.3rem;font-size:1.05rem}
+.result .total b{font-family:var(--display);font-size:1.3rem;color:var(--primary)}
+.result .note{font-size:.82rem;color:var(--muted)}
+
+/* 교사용 */
+.t-only{display:none}
+body.teacher .t-only{display:flex}
+body.teacher li.t-only{display:list-item}
+body.teacher tr.t-only{display:table-row}
+body.teacher .tbl.t-only{display:block}
+.tip{background:var(--surface);border:1px solid var(--accent);border-radius:var(--radius);padding:1rem 1.2rem;flex-direction:column;gap:.5rem}
+.tip .tl{font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--accent-ink);display:flex;align-items:center;gap:.4em}
+.tip ul{font-size:.94rem}
+.hint{font-size:.85rem;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:var(--radius);padding:.5rem .8rem}
+
+/* 학습지 */
+.ws{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:1rem}
+.ws .wsh{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:flex-end;border-bottom:2px solid var(--fg);padding-bottom:.6rem}
+.ws .wsh h3{font-size:1.2rem}
+.ws .wsh .id{font-size:.9rem;display:flex;gap:1.2rem;flex-wrap:wrap}
+.ws .wsh .id span{border-bottom:1px solid var(--fg);min-width:7em;display:inline-block;padding:0 .3em}
+.ws h4{font-size:.95rem;margin-top:.2rem}
+.ws .blank{display:inline-block;min-width:5em;border-bottom:1.5px solid var(--fg);text-align:center;color:var(--primary);font-weight:700}
+.ws .blank .a{opacity:0}
+.ws.show-ans .blank .a{opacity:1}
+.ws .lines{display:grid;gap:.1rem}
+.ws .lines div{border-bottom:1px solid var(--line);min-height:2.1em}
+.ws .wsox{list-style:none;padding:0;display:grid;gap:.25rem;font-size:.93rem}
+.ws .wsox li{display:grid;grid-template-columns:1fr auto;gap:.6rem;align-items:center;padding:.3rem 0;border-bottom:1px dotted var(--line);margin:0}
+.ws .wsox .i{font-weight:700;margin-right:.4em;font-variant-numeric:tabular-nums}
+.ws .wsox .box{display:flex;gap:.4rem}
+.ws .wsox .box span{width:1.7em;height:1.7em;border:1.5px solid var(--fg);border-radius:4px;display:grid;place-items:center;font-size:.8rem;font-weight:700}
+.ws.show-ans .wsox .box span.k{background:var(--primary);color:var(--primary-ink);border-color:var(--primary)}
+.ws .wsfoot{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.5rem}
+.wsbar{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.wsbar .hint{flex:1 1 240px}
+
+/* 차시 이동 & 완료 */
+.pager{display:flex;justify-content:space-between;gap:1rem;align-items:center;border-top:1px solid var(--line);padding-top:1.2rem;flex-wrap:wrap}
+.pager a{text-decoration:none;font-weight:500;display:inline-flex;gap:.4em;align-items:center;padding:.5em .9em;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);color:var(--fg)}
+.pager a:hover{border-color:var(--primary)}
+.pager .done-wrap{display:flex;align-items:center;gap:.5rem;font-size:.9rem}
+.pager .done-wrap input{accent-color:var(--primary);width:1.1em;height:1.1em}
+
+/* 개요 */
+.hero{display:grid;gap:1.1rem;padding-bottom:1.6rem;border-bottom:2px solid var(--fg)}
+.hero .lede{font-size:1.08rem;max-width:62ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem}
+.fact{border-top:2px solid var(--primary);padding-top:.5rem;display:flex;flex-direction:column;gap:.05rem}
+.fact b{font-family:var(--display);font-size:1.35rem;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
+.fact span{font-size:.82rem;color:var(--muted)}
+.syl{list-style:none;padding:0;display:grid;gap:.5rem}
+.syl li{margin:0}
+.syl li a{display:grid;grid-template-columns:2.4rem 1fr;gap:.8rem;align-items:start;text-decoration:none;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.75rem .95rem}
+.syl li a:hover{border-color:var(--primary)}
+.syl .n{font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--primary);line-height:1.1;font-variant-numeric:tabular-nums}
+.syl .tt{font-weight:700}
+.syl .dd{font-size:.88rem;color:var(--muted)}
+.unitlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem;font-size:.9rem}
+.unitlist div{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:.6rem .8rem}
+.unitlist b{display:block;font-size:.8rem;color:var(--muted);font-weight:500}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.82rem;padding-block:1.5rem 2.5rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));text-align:center}
+.rubric th,.rubric td{font-size:.88rem}
+kbd.k{font:inherit;font-size:.85em;background:var(--code);border-radius:3px;padding:0 .35em}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{
+  @page{margin:14mm}
+  .topbar,.side,.pager,footer,.btn,.hint,.wsbar,.oxctl{display:none!important}
+  body{background:#fff;color:#000;font-size:11pt}
+  body::before{display:none}
+  .shell{display:block;padding:0}
+  main{padding:0;max-width:none}
+  .act,.qz,.term,.card,.ox,.law,.callout{box-shadow:none;break-inside:avoid}
+  a{color:inherit;text-decoration:none}
+  .t-only{display:none!important}
+  body.teacher .t-only{display:flex!important}
+  body.teacher li.t-only{display:list-item!important}
+  body.teacher tr.t-only{display:table-row!important}
+  .ws{break-before:page;border:0;padding:0}
+  body.ws-print .view > *:not(.ws){display:none!important}
+  body.ws-print .ws{break-before:auto}
+  body.ws-print .ws.show-ans .blank .a{opacity:1}
+}
+</style>
+<style>
+.wsmain{max-width:860px;margin:0 auto;padding:1.5rem 16px 4rem;display:flex;flex-direction:column;gap:2rem}
+.wsmain .ws{padding:1.4rem 1.6rem}
+.wsbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:.6rem 0;border-bottom:1px solid var(--line)}
+body.show-ans .ws .blank .a{opacity:1}
+body.show-ans .ws .wsox .box span.k{background:var(--primary);color:var(--primary-ink);border-color:var(--primary)}
+.ws .wsox .box span.k{background:transparent;color:inherit;border-color:var(--fg)}
+.wsmain h1{font-size:1.6rem}
+@media print{.wsmain{padding:0;max-width:none;gap:0}.wsmain>h1,.wsmain>p{display:none}.ws{break-before:page;border:0;padding:0}.ws:first-of-type{break-before:auto}}
+</style>
+</head>
+<body>
+<main class="wsmain">
+  <h1>청소년 노동인권 10차시 · 학습지 모음</h1>
+  <p class="muted">차시별 학습지 10장입니다. 인쇄하면 차시마다 새 페이지에서 시작합니다. 교사용으로 정답을 표시한 채 인쇄할 수 있습니다.</p>
+  <div class="wsbar">
+    <button type="button" class="btn pri" id="printAll">전체 인쇄</button>
+    <label class="btn"><input type="checkbox" id="ansToggle"> 정답 표시 (교사용)</label>
+    <span class="muted" style="font-size:.85rem">특정 차시만 인쇄하려면 브라우저 인쇄 창에서 페이지 범위를 지정하세요.</span>
+  </div>
+<div class="ws" data-ws="s1">
+      <div class="wsh"><h3>1차시 학습지 · 노동, 나의 이야기</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li>근로기준법은 직업의 종류와 관계없이 <span class="blank"><span class="a">임금</span></span>을 목적으로 사업장에 근로를 제공하는 사람을 근로자라고 한다.</li>
+        <li>헌법 제32조 제5항: “<span class="blank"><span class="a">연소자</span></span>의 근로는 특별한 보호를 받는다.”</li>
+        <li>헌법 제33조가 보장하는 노동3권은 단결권, <span class="blank"><span class="a">단체교섭권</span></span>, 단체행동권이다.</li>
+        <li>일하는 사람이 사람답게 일할 권리를 통틀어 <span class="blank"><span class="a">노동인권</span></span>이라고 한다.</li>
+      </ol>
+      <h4>2. 내 하루 노동 지도 (모둠 기록)</h4>
+      <div class="tbl"><table><thead><tr><th>시간대</th><th>숨은 노동자</th><th>◎ 보이지 않는 노동 / ★ 청소년 노동</th></tr></thead><tbody>
+        <tr><td>아침</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>오전</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>점심</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>오후</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>저녁·밤</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s1"></ol>
+      <h4>4. 한 줄 성찰</h4>
+      <p>나에게 노동이란 ______________ 이다. 왜냐하면</p>
+      <div class="lines"><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 1차시 학습지</p>
+    </div>
+<div class="ws" data-ws="s2">
+      <div class="wsh"><h3>2차시 학습지 · 몇 살부터, 어디서, 얼마나</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li><span class="blank"><span class="a">15</span></span>세 미만은 원칙적으로 근로자로 쓸 수 없고, 13세 이상이면 <span class="blank"><span class="a">취직인허증</span></span>을 받아 일할 수 있다.</li>
+        <li>18세 미만의 근로시간은 1일 <span class="blank"><span class="a">7</span></span>시간, 1주 <span class="blank"><span class="a">35</span></span>시간이 원칙이며, 합의해도 1일 <span class="blank"><span class="a">8</span></span>시간을 넘을 수 없다.</li>
+        <li>오후 <span class="blank"><span class="a">10</span></span>시부터 오전 <span class="blank"><span class="a">6</span></span>시까지는 본인 동의와 고용노동부장관의 <span class="blank"><span class="a">인가</span></span>가 있어야만 일할 수 있다.</li>
+        <li>사용자는 가족관계증명서와 <span class="blank"><span class="a">친권자 동의서</span></span>를 사업장에 갖춰 두어야 하지만, 부모가 근로계약을 <span class="blank"><span class="a">대리</span></span>할 수는 없다.</li>
+      </ol>
+      <h4>2. 나의 알바 조건표</h4>
+      <div class="tbl"><table><thead><tr><th>구분</th><th>학기 중</th><th>방학</th></tr></thead><tbody>
+        <tr><td>일할 수 있는 요일</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>일할 수 있는 시간대 (22시 전 종료)</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>하루 최대 시간 / 1주 최대 시간</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>하고 싶은 일 / 할 수 없는 업종</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s2"></ol>
+      <h4>4. 한 줄 성찰</h4>
+      <p>법이 청소년의 노동을 특별히 보호하는 이유를 내 말로 쓰면,</p>
+      <div class="lines"><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 2차시 학습지</p>
+    </div>
+<div class="ws" data-ws="s3">
+      <div class="wsh"><h3>3차시 학습지 · 근로계약서, 종이 한 장의 힘</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li>사용자는 18세 미만 근로자에게 근로조건을 <span class="blank"><span class="a">서면</span></span>으로 명시하여 <span class="blank"><span class="a">교부</span></span>해야 하며, 어기면 500만원 이하 벌금이다.</li>
+        <li>지각 벌금이나 기물 파손 전액 변상처럼 손해배상액을 미리 정하는 계약은 근로기준법 제<span class="blank"><span class="a">20</span></span>조 위반이다.</li>
+        <li>임금은 통화로, 직접, <span class="blank"><span class="a">전액</span></span>을, 매월 <span class="blank"><span class="a">1</span></span>회 이상 정해진 날에 지급해야 한다.</li>
+        <li>근로계약서는 <span class="blank"><span class="a">2</span></span>부를 작성해 1부는 근로자가 보관한다.</li>
+      </ol>
+      <h4>2. 나의 근로계약서 (연소근로자 표준근로계약서 요약 양식)</h4>
+      <div class="tbl"><table><tbody>
+        <tr><th>사업장 (상호·주소·연락처)</th><td>&nbsp;</td></tr>
+        <tr><th>근로계약 기간</th><td>20&nbsp;&nbsp;년&nbsp;&nbsp;월&nbsp;&nbsp;일 ~ 20&nbsp;&nbsp;년&nbsp;&nbsp;월&nbsp;&nbsp;일</td></tr>
+        <tr><th>근무 장소 · 업무 내용</th><td>&nbsp;</td></tr>
+        <tr><th>소정근로시간</th><td>요일: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 시 &nbsp;&nbsp;분 ~ &nbsp;&nbsp;시 &nbsp;&nbsp;분 (휴게 &nbsp;&nbsp;&nbsp;분)</td></tr>
+        <tr><th>주휴일</th><td>매주 &nbsp;&nbsp;&nbsp;요일</td></tr>
+        <tr><th>임금</th><td>시급 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;원 / 지급일 매월 &nbsp;&nbsp;&nbsp;일 / 지급 방법: 본인 계좌 입금</td></tr>
+        <tr><th>연차유급휴가</th><td>근로기준법에 따름 (5인 미만 사업장은 해당 없음)</td></tr>
+        <tr><th>가족관계증명서 · 친권자 동의서</th><td>제출함 ( &nbsp;&nbsp;)</td></tr>
+        <tr><th>서명</th><td>사용자: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(서명) &nbsp;&nbsp;&nbsp;&nbsp; 근로자: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(서명)</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s3"></ol>
+      <h4>4. 한 줄 성찰</h4>
+      <p>사장님이 “계약서는 됐고”라고 말하면 나는 이렇게 말하겠다:</p>
+      <div class="lines"><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 3차시 학습지</p>
+    </div>
+<div class="ws" data-ws="s4">
+      <div class="wsh"><h3>4차시 학습지 · 내 임금, 내가 계산한다</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li>2026년 최저임금은 시급 <span class="blank"><span class="a">10,320</span></span>원이다. 내가 예상한 금액: __________원</li>
+        <li>주휴수당은 1주 소정근로시간이 <span class="blank"><span class="a">15</span></span>시간 이상이고 <span class="blank"><span class="a">개근</span></span>했을 때 받는다. 계산식: (1주 소정근로시간 ÷ <span class="blank"><span class="a">40</span></span>) × 8 × 시급</li>
+        <li>연장·야간·휴일 가산수당 <span class="blank"><span class="a">50</span></span>%는 상시 <span class="blank"><span class="a">5</span></span>인 이상 사업장에만 적용된다.</li>
+        <li>수습 감액은 <span class="blank"><span class="a">1년</span></span> 이상 계약 + 3개월 이내일 때만 가능하고, 편의점·카페 같은 <span class="blank"><span class="a">단순노무</span></span> 업무는 감액할 수 없다.</li>
+      </ol>
+      <h4>2. 시나리오 계산</h4>
+      <div class="tbl"><table><thead><tr><th>시나리오</th><th>1주 시간</th><th>기본급</th><th>주휴수당</th><th>가산수당</th><th>주급 합계</th></tr></thead><tbody>
+        <tr><td>A 카페 (4인)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>B 편의점 (3인)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>C 패스트푸드 (12인)</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s4"></ol>
+      <h4>4. 내 월급에서 확인할 3가지</h4>
+      <div class="lines"><div></div><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 4차시 학습지</p>
+    </div>
+<div class="ws" data-ws="s5">
+      <div class="wsh"><h3>5차시 학습지 · 쉴 권리, 안전할 권리</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li>근로시간 4시간에 <span class="blank"><span class="a">30</span></span>분, 8시간에 <span class="blank"><span class="a">1</span></span>시간 이상의 휴게시간을 근로시간 <span class="blank"><span class="a">도중</span></span>에 주어야 한다.</li>
+        <li>산재보험은 근로자를 사용하는 <span class="blank"><span class="a">모든</span></span> 사업장에 적용되며, 근로자의 <span class="blank"><span class="a">과실</span></span>이 있어도 보상한다.</li>
+        <li>산재로 치료 중 일하지 못한 기간에는 평균임금의 <span class="blank"><span class="a">70</span></span>%를 <span class="blank"><span class="a">휴업급여</span></span>로 받는다.</li>
+        <li>급박한 위험이 있으면 근로자는 작업을 <span class="blank"><span class="a">중지</span></span>하고 대피할 수 있다(산업안전보건법 제52조).</li>
+      </ol>
+      <h4>2. 사고 발생 5단계와 ‘하면 안 되는 말’</h4>
+      <div class="tbl"><table><thead><tr><th>순서</th><th>행동</th><th>이 단계에서 하면 안 되는 말·행동</th></tr></thead><tbody>
+        <tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s5"></ol>
+      <h4>4. 도입 사례의 사장님 말이 틀린 이유 (각 한 문장)</h4>
+      <div class="lines"><div></div><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 5차시 학습지</p>
+    </div>
+<div class="ws" data-ws="s6">
+      <div class="wsh"><h3>6차시 학습지 · 부당한 대우, 이렇게 대응한다</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li>그만둔 뒤 임금은 <span class="blank"><span class="a">14</span></span>일 이내에 전액 받아야 하며, 못 받은 임금은 <span class="blank"><span class="a">3</span></span>년 안에 청구할 수 있다.</li>
+        <li>해고하려면 <span class="blank"><span class="a">30</span></span>일 전에 예고하거나 30일분 통상임금을 줘야 한다. 단 <span class="blank"><span class="a">3개월</span></span> 미만 근무자는 제외.</li>
+        <li>부당해고 구제신청은 <span class="blank"><span class="a">5</span></span>인 이상 사업장에서 해고일부터 <span class="blank"><span class="a">3개월</span></span> 안에 노동위원회에 한다.</li>
+        <li>직장 내 성희롱 금지는 <span class="blank"><span class="a">모든</span></span> 사업장에 적용되고, 손님의 성희롱에도 사업주는 <span class="blank"><span class="a">보호 조치</span></span>를 해야 한다.</li>
+      </ol>
+      <h4>2. 3단계 대화 쓰기 (시나리오 번호: &nbsp;&nbsp;&nbsp;)</h4>
+      <div class="tbl"><table><tbody>
+        <tr><th>① 사실</th><td>&nbsp;<br>&nbsp;</td></tr>
+        <tr><th>② 근거</th><td>&nbsp;<br>&nbsp;</td></tr>
+        <tr><th>③ 요구·기한</th><td>&nbsp;<br>&nbsp;</td></tr>
+        <tr><th>④ 예고</th><td>&nbsp;</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s6"></ol>
+      <h4>4. 내가 당하면 첫 24시간 안에 할 일 3가지</h4>
+      <div class="lines"><div></div><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 6차시 학습지 · 1350 / 1644-3119 / 1388 / 112</p>
+    </div>
+<div class="ws" data-ws="s7">
+      <div class="wsh"><h3>7차시 학습지 · 노동의 역사, 권리의 역사</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li>1833년 영국 <span class="blank"><span class="a">공장법</span></span>은 9세 미만 아동의 고용을 금지한 최초의 아동노동 규제다.</li>
+        <li><span class="blank"><span class="a">1970</span></span>년 11월 13일, 전태일은 “<span class="blank"><span class="a">근로기준법</span></span>을 준수하라”고 외쳤다.</li>
+        <li>노동3권은 <span class="blank"><span class="a">단결권</span></span>, 단체교섭권, <span class="blank"><span class="a">단체행동권</span></span>이다.</li>
+        <li>우리나라 최저임금제는 <span class="blank"><span class="a">1988</span></span>년에 시행되었고, 2026년부터 5월 1일의 법정 명칭은 <span class="blank"><span class="a">노동절</span></span>이다.</li>
+      </ol>
+      <h4>2. 모의 교섭 기록</h4>
+      <div class="tbl"><table><thead><tr><th>요구안</th><th>사장의 답변</th><th>합의 내용 · 시행일</th></tr></thead><tbody>
+        <tr><td>1.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2.</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3.</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s7"></ol>
+      <h4>4. 세 문장 편지 (받는 사람: 전태일 / 2056년의 나 / 평화시장의 시다)</h4>
+      <div class="lines"><div></div><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 7차시 학습지</p>
+    </div>
+<div class="ws" data-ws="s8">
+      <div class="wsh"><h3>8차시 학습지 · 배달앱 시대, 일의 모양이 바뀐다</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li>근로자인지 여부는 계약서의 제목이 아니라 <span class="blank"><span class="a">실질</span></span>(지휘·감독, 시간·장소 지정 등)로 판단한다.</li>
+        <li>배달 라이더처럼 근로자와 자영업자의 중간에 있는 사람을 <span class="blank"><span class="a">노무제공자</span></span>라 하며, <span class="blank"><span class="a">산재</span></span>보험과 고용보험이 적용된다.</li>
+        <li>원동기장치자전거 면허는 <span class="blank"><span class="a">16</span></span>세부터 딸 수 있다.</li>
+        <li>‘일하기 전에 <span class="blank"><span class="a">돈</span></span>을 먼저 내라’, ‘<span class="blank"><span class="a">신분증</span></span>·통장을 먼저 보내라’는 구인은 범죄 신호다.</li>
+      </ol>
+      <h4>2. 구인 광고 판정</h4>
+      <div class="tbl"><table><thead><tr><th>광고</th><th>정상 / 주의 / 범죄</th><th>근거 (위험 신호)</th><th>거절 문장</th></tr></thead><tbody>
+        <tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s8"></ol>
+      <h4>4. 일이 아무리 바뀌어도 변하지 않아야 할 노동인권 한 가지</h4>
+      <div class="lines"><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 8차시 학습지</p>
+    </div>
+<div class="ws" data-ws="s9">
+      <div class="wsh"><h3>9차시 학습지 · 존중받는 일터, 차별 없는 일터</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 핵심 정리 (빈칸 채우기)</h4>
+      <ol>
+        <li>근로기준법 제6조는 성별, <span class="blank"><span class="a">국적</span></span>, 신앙, 사회적 신분을 이유로 한 차별을 금지하며 <span class="blank"><span class="a">모든</span></span> 사업장에 적용된다.</li>
+        <li>최저임금은 <span class="blank"><span class="a">나이</span></span>와 국적에 관계없이 똑같이 적용된다.</li>
+        <li>단시간근로자라는 이유로 합리적 이유 없이 차별하면 <span class="blank"><span class="a">기간제 및 단시간근로자 보호법</span></span> 위반이다.</li>
+        <li>손님의 폭언이 있을 때 고객응대근로자는 업무 <span class="blank"><span class="a">중단</span></span>이나 전환을 요구할 수 있고, 사업주는 이를 이유로 불이익을 줄 수 없다(산업안전보건법 제<span class="blank"><span class="a">41</span></span>조).</li>
+      </ol>
+      <h4>2. 존중 일터 체크리스트 10항목</h4>
+      <div class="tbl"><table><thead><tr><th>입장</th><th>항목 (구체적 행동으로)</th></tr></thead><tbody>
+        <tr><td rowspan="3">사장</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>
+        <tr><td rowspan="3">동료</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>
+        <tr><td rowspan="4">손님인 나</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>
+      </tbody></table></div>
+      <h4>3. OX 확인</h4>
+      <ol class="wsox" data-set="s9"></ol>
+      <h4>4. 손님인 나의 약속 한 가지</h4>
+      <div class="lines"><div></div><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 9차시 학습지</p>
+    </div>
+<div class="ws" data-ws="s10">
+      <div class="wsh"><h3>10차시 학습지 · 우리가 만드는 노동인권 선언</h3><div class="id"><span>학년 반</span><span>번호</span><span>이름</span></div></div>
+      <h4>1. 종합 OX</h4>
+      <ol class="wsox" data-set="s10"></ol>
+      <h4>2. 프로젝트 계획 (선택: A 카드뉴스 / B 선언문 / C 상황극)</h4>
+      <div class="tbl"><table><tbody>
+        <tr><th>제목</th><td>&nbsp;</td></tr>
+        <tr><th>담을 핵심 내용 (조문·숫자 포함)</th><td>&nbsp;<br>&nbsp;<br>&nbsp;</td></tr>
+        <tr><th>모둠원 역할</th><td>&nbsp;<br>&nbsp;</td></tr>
+        <tr><th>넣을 연락처</th><td>1350 · 1644-3119 · 1388 · ______</td></tr>
+      </tbody></table></div>
+      <h4>3. 3-2-1 성찰</h4>
+      <p>배운 것 3가지</p>
+      <div class="lines"><div></div><div></div><div></div></div>
+      <p>다음 아르바이트에서 실천할 것 2가지</p>
+      <div class="lines"><div></div><div></div></div>
+      <p>아직 남은 질문 1가지</p>
+      <div class="lines"><div></div></div>
+      <p class="wsfoot">청소년 노동인권 10차시 · 10차시 학습지</p>
+    </div>
+</main>
+<!-- OX_DATA:start -->
+<script id="oxdata">
+const OX_DATA = {
+s1:[
+ {q:"아르바이트생은 근로기준법상 근로자가 아니다.",a:false,e:"직업 종류와 관계없이 임금을 목적으로 일하면 모두 근로자입니다(근로기준법 제2조). 알바생, 수습, 하루 알바도 포함됩니다."},
+ {q:"집안일이나 동생 돌보기도 노동이다.",a:true,e:"임금을 받지 않아도 생활에 필요한 것을 만드는 활동은 노동입니다. 가사·돌봄노동은 보이지 않는 노동의 대표 사례입니다."},
+ {q:"헌법은 ‘연소자의 근로는 특별한 보호를 받는다’고 직접 규정한다.",a:true,e:"헌법 제32조 제5항입니다. 이 조항 때문에 근로기준법에 18세 미만 보호 조항이 따로 있습니다."},
+ {q:"노동3권은 노동조합에 가입한 사람만 누릴 수 있다.",a:false,e:"헌법 제33조는 ‘근로자’ 모두에게 단결권·단체교섭권·단체행동권을 보장합니다. 가입 여부와 관계없는 헌법상 권리입니다."},
+ {q:"최저임금제는 헌법에 근거를 둔 제도다.",a:true,e:"헌법 제32조 제1항이 국가에 최저임금제 시행 의무를 지웁니다."},
+ {q:"편의점 점장은 사업주가 아니므로 ‘사용자’가 아니다.",a:false,e:"근로자에 관한 사항에 대해 사업주를 위해 행위하는 사람(점장, 매니저)도 근로기준법상 사용자입니다."},
+ {q:"‘근로’와 ‘노동’은 법적으로 전혀 다른 개념이다.",a:false,e:"같은 뜻입니다. 법률 용어로 ‘근로’를 쓰고 일상과 헌법 제33조 등에서 ‘노동’을 씁니다."},
+ {q:"근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정해야 한다.",a:true,e:"헌법 제32조 제3항입니다. 근로기준법이 그 법률입니다."},
+ {q:"하루만 일하고 그만둔 사람은 근로자가 아니다.",a:false,e:"근로 기간의 길이는 근로자 여부와 관계없습니다. 하루 일한 임금도 전액 받을 권리가 있습니다."},
+ {q:"노동인권에는 안전하게 일할 권리와 쉴 권리가 포함된다.",a:true,e:"정당한 임금, 안전, 휴식, 차별받지 않을 권리, 단결할 권리가 모두 노동인권입니다."}
+],
+s2:[
+ {q:"15세 미만은 어떤 경우에도 일할 수 없다.",a:false,e:"13세 이상 15세 미만은 고용노동부의 취직인허증을 받으면 일할 수 있습니다. 예술공연 참가는 13세 미만도 가능합니다."},
+ {q:"18세 미만의 근로시간은 원칙적으로 1일 7시간, 1주 35시간이다.",a:true,e:"근로기준법 제69조입니다. 합의하면 1일 1시간, 1주 5시간까지만 연장할 수 있습니다."},
+ {q:"당사자가 합의하면 18세 미만도 하루 10시간 일할 수 있다.",a:false,e:"합의해도 하루 8시간, 1주 40시간이 상한입니다."},
+ {q:"밤 10시 이후 근로는 본인이 동의하면 가능하다.",a:false,e:"본인 동의에 더해 고용노동부장관의 인가가 있어야 합니다(제70조 제2항)."},
+ {q:"사용자는 18세 미만 근로자의 친권자 동의서를 사업장에 갖춰 두어야 한다.",a:true,e:"가족관계기록사항에 관한 증명서와 친권자(후견인) 동의서를 비치해야 합니다(제66조)."},
+ {q:"부모가 자녀 대신 근로계약을 체결할 수 있다.",a:false,e:"친권자나 후견인은 미성년자의 근로계약을 대리할 수 없습니다(제67조 제1항). 동의와 대리는 다릅니다."},
+ {q:"노래연습장은 청소년이 손님으로 들어갈 수 있으므로 아르바이트도 할 수 있다.",a:false,e:"노래연습장은 청소년 보호법상 청소년 출입·고용 금지 업소입니다(청소년실 제외). 출입 가능과 고용 가능은 다릅니다."},
+ {q:"중학교에 재학 중인 15세는 취직인허증 없이 일할 수 있다.",a:false,e:"중학교 재학 중인 18세 미만은 15세 미만과 같이 취급되어 취직인허증이 필요합니다(제64조)."},
+ {q:"18세 미만을 유해하거나 위험한 사업에 쓰면 사용자가 처벌받는다.",a:true,e:"제65조 위반으로 3년 이하 징역 또는 3천만원 이하 벌금입니다."},
+ {q:"고용 금지 업소에서 일한 청소년도 일한 만큼의 임금은 받을 수 있다.",a:true,e:"처벌은 사업주가 받고, 근로자는 일한 시간에 대한 임금을 전액 받을 권리가 있습니다."}
+],
+s3:[
+ {q:"근로계약서를 쓰지 않았다면 근로계약도 성립하지 않은 것이다.",a:false,e:"말로 약속하고 일을 시작했으면 근로계약은 성립합니다. 서면 미작성은 사용자가 처벌받는 별개의 문제입니다."},
+ {q:"18세 미만에게 근로조건을 서면으로 교부하지 않은 사용자는 500만원 이하 벌금을 받는다.",a:true,e:"근로기준법 제67조 제3항 위반, 제114조에 따라 500만원 이하 벌금입니다."},
+ {q:"‘지각 1회당 1만원 공제’ 조항에 서명했으면 그 조항은 유효하다.",a:false,e:"위약금이나 손해배상액을 미리 정하는 계약은 금지됩니다(제20조). 서명했어도 무효입니다."},
+ {q:"임금은 매월 1회 이상 정해진 날짜에 지급해야 한다.",a:true,e:"임금 지급 4원칙 중 정기 지급 원칙입니다(제43조 제2항)."},
+ {q:"근로계약서는 사업장에서만 보관하면 충분하다.",a:false,e:"2부를 작성해 1부를 근로자에게 교부해야 합니다. 18세 미만에게는 교부가 법적 의무입니다."},
+ {q:"시급이 최저임금보다 낮게 적힌 계약서에 서명했다면 그 시급대로 받아야 한다.",a:false,e:"최저임금에 못 미치는 부분은 무효이고 최저임금만큼 받아야 합니다(최저임금법 제6조)."},
+ {q:"근로계약서에는 휴일과 소정근로시간을 반드시 적어야 한다.",a:true,e:"임금, 소정근로시간, 휴일, 연차유급휴가 등은 필수 기재사항입니다(제17조)."},
+ {q:"주휴수당을 시급에 포함해 지급하는 것은 어떤 경우에도 불법이다.",a:false,e:"기본시급이 최저임금 이상이고, 주휴수당 금액과 계산 근거가 계약서에 명시되어 있으면 가능합니다. 명시 없이 ‘포함’이라고만 하면 문제입니다."},
+ {q:"갑자기 그만둔 근로자에게는 마지막 달 임금을 주지 않아도 된다.",a:false,e:"임금 전액 지급 원칙 위반입니다. 일한 시간의 임금은 전액, 퇴직 후 14일 안에 지급해야 합니다."},
+ {q:"고용노동부 표준근로계약서가 아니라 사업장 자체 양식을 써도 된다.",a:true,e:"필수 기재사항이 모두 들어 있으면 양식은 자유입니다. 다만 표준 양식을 쓰면 누락을 막기 쉽습니다."}
+],
+s4:[
+ {q:"2026년 최저임금은 시급 10,320원이다.",a:true,e:"2025년 10,030원에서 2.9% 인상되었습니다. 월 환산액(209시간)은 2,156,880원입니다."},
+ {q:"최저임금은 성인에게만 적용되고 청소년은 더 적게 줄 수 있다.",a:false,e:"최저임금은 나이, 국적, 고용 형태와 관계없이 모든 근로자에게 적용됩니다."},
+ {q:"1주 12시간 일하는 알바생은 주휴수당을 받을 수 없다.",a:true,e:"주휴수당은 1주 소정근로시간 15시간 이상일 때 발생합니다."},
+ {q:"주휴수당은 5인 미만 사업장에는 적용되지 않는다.",a:false,e:"주휴일과 주휴수당은 사업장 규모와 관계없이 적용됩니다."},
+ {q:"5인 미만 사업장은 야간근로 가산수당(50%)을 줄 의무가 없다.",a:true,e:"연장·야간·휴일 가산수당(제56조)은 상시 5인 이상 사업장에만 적용됩니다. 다만 18세 미만의 야간근로 자체는 인가 없이는 금지입니다."},
+ {q:"편의점 아르바이트는 수습 3개월 동안 최저임금의 90%만 줘도 된다.",a:false,e:"수습 감액은 1년 이상 계약일 때만 가능하고, 편의점처럼 단순노무 업무는 1년 계약이어도 감액할 수 없습니다."},
+ {q:"미성년자의 임금은 부모 계좌로 보내도 된다.",a:false,e:"임금은 근로자 본인에게 직접 지급해야 합니다(제43조). 미성년자도 독자적으로 임금을 청구합니다(제68조)."},
+ {q:"임금명세서는 5인 이상 사업장만 교부하면 된다.",a:false,e:"임금명세서 교부(제48조 제2항)는 모든 사업장의 의무입니다. 문자나 앱으로 줘도 됩니다."},
+ {q:"1주 20시간 일하고 개근하면 주휴수당은 시급 4시간분이다.",a:true,e:"(20 ÷ 40) × 8 = 4시간. 시급 10,320원이면 41,280원입니다."},
+ {q:"휴게시간은 근로시간이 아니므로 임금을 지급하지 않아도 된다.",a:true,e:"휴게시간은 무급입니다. 다만 자유롭게 쓸 수 없는 대기시간은 근로시간이므로 임금을 줘야 합니다."}
+],
+s5:[
+ {q:"하루 6시간 근무하면 최소 30분의 휴게시간을 받아야 한다.",a:true,e:"4시간 이상이면 30분, 8시간 이상이면 1시간 이상입니다(제54조)."},
+ {q:"휴게시간에도 손님이 오면 응대해야 한다면 그 시간은 휴게시간이 아니다.",a:true,e:"휴게시간은 자유롭게 이용할 수 있어야 합니다. 대기 상태는 근로시간입니다."},
+ {q:"사업주가 산재보험에 가입하지 않았으면 산재 보상을 받을 수 없다.",a:false,e:"산재보험은 모든 사업장에 자동 적용됩니다. 사업주 미가입·보험료 미납과 관계없이 근로복지공단이 보상합니다."},
+ {q:"내 실수로 다쳤으면 산재가 아니다.",a:false,e:"산재보험은 근로자의 과실을 따지지 않습니다. 업무와 관련해 다쳤으면 보상됩니다."},
+ {q:"통상적인 경로로 출근하다 당한 교통사고는 산재가 아니다.",a:false,e:"2018년부터 통상적인 경로와 방법의 출퇴근 재해도 업무상 재해로 인정됩니다."},
+ {q:"산재 휴업급여는 평균임금의 70%다.",a:true,e:"치료 때문에 일하지 못한 기간에 평균임금의 70%를 받습니다. 최저임금 수준이 하한입니다."},
+ {q:"일한 지 하루 만에 다쳐도 산재보험이 적용된다.",a:true,e:"근로 기간과 관계없이 적용됩니다."},
+ {q:"급박한 위험이 있어 작업을 중지하고 대피했다는 이유로 해고할 수 없다.",a:true,e:"산업안전보건법 제52조. 작업중지·대피를 이유로 한 불이익 처우는 금지됩니다."},
+ {q:"산재 신청서에는 사업주의 확인 서명이 반드시 있어야 한다.",a:false,e:"사업주 확인 없이도 근로자가 직접 근로복지공단에 신청할 수 있습니다."},
+ {q:"사업주가 치료비를 주겠다며 합의하자고 하면 바로 서명하는 것이 유리하다.",a:false,e:"‘공상 처리’는 후유증과 휴업급여를 놓치기 쉽습니다. 서명 전에 1644-3119에 상담하세요."}
+],
+s6:[
+ {q:"퇴직하면 임금은 14일 이내에 전부 지급해야 한다.",a:true,e:"금품 청산 의무(제36조)입니다. 당사자 합의로 연장할 수는 있습니다."},
+ {q:"임금체불은 1년 안에 신고하지 않으면 받을 수 없다.",a:false,e:"임금채권의 소멸시효는 3년입니다(제49조)."},
+ {q:"미성년자는 부모 없이 혼자서 임금체불 진정을 할 수 없다.",a:false,e:"미성년자는 독자적으로 임금을 청구할 수 있습니다(제68조). 노동포털에서 본인이 진정할 수 있습니다."},
+ {q:"2개월 일한 알바생을 당일 해고하면 해고예고수당을 줘야 한다.",a:false,e:"계속 근로 3개월 미만인 근로자는 해고예고 적용 제외입니다(제26조). 다만 일한 임금은 전액 지급해야 하고, 5인 이상이면 부당해고를 다툴 수 있습니다."},
+ {q:"카톡으로 ‘내일부터 나오지 마’라고 보낸 것은 해고가 아니다.",a:false,e:"방법과 관계없이 사용자의 일방적 근로관계 종료는 해고입니다. 5인 이상 사업장은 서면 통지가 없으면 효력이 없습니다."},
+ {q:"부당해고 구제신청은 5인 이상 사업장에서 해고일부터 3개월 안에 노동위원회에 한다.",a:true,e:"근로기준법 제28조입니다. 5인 미만 사업장은 구제신청 대상이 아닙니다."},
+ {q:"손님이 한 성희롱은 사업주 책임이 아니다.",a:false,e:"고객 성희롱에 대해 사업주는 근무 장소 변경 등 보호 조치를 해야 합니다(남녀고용평등법 제14조의2)."},
+ {q:"직장 내 괴롭힘 금지 조항은 모든 사업장에 적용된다.",a:false,e:"근로기준법 제76조의2는 5인 이상 사업장에 적용됩니다. 5인 미만에서도 폭행은 금지(제8조)되고 모욕·협박은 형법으로 대응합니다."},
+ {q:"내가 대화 당사자인 통화를 녹음한 파일은 증거로 쓸 수 있다.",a:true,e:"대화 당사자의 녹음은 통신비밀보호법 위반이 아니며 진정·소송에서 증거가 됩니다."},
+ {q:"사업주가 끝내 임금을 주지 못하면 국가가 일부를 대신 지급하는 제도가 있다.",a:true,e:"간이대지급금 제도입니다. 최종 3개월 임금과 3년 퇴직금을 합쳐 최대 1,000만원까지 받을 수 있습니다."}
+],
+s7:[
+ {q:"1833년 영국 공장법은 9세 미만 아동의 고용을 금지했다.",a:true,e:"최초의 아동노동 규제로, 9~13세는 하루 9시간으로 제한했습니다."},
+ {q:"전태일은 1970년 ‘근로기준법을 준수하라’고 외쳤다.",a:true,e:"1970년 11월 13일 평화시장. 이후 노동 문제가 사회 의제가 되었습니다."},
+ {q:"노동3권은 단결권, 단체교섭권, 단체휴가권이다.",a:false,e:"단결권, 단체교섭권, 단체행동권입니다(헌법 제33조)."},
+ {q:"아르바이트생은 노동조합에 가입할 수 없다.",a:false,e:"근로자라면 누구나 노조를 만들거나 가입할 수 있습니다. 청년유니온·알바노조처럼 사업장에 매이지 않는 노조도 있습니다."},
+ {q:"우리나라 최저임금제는 1988년에 시행되었다.",a:true,e:"첫 최저시급은 462.5원이었습니다."},
+ {q:"ILO는 1919년 창설되었고 ‘노동은 상품이 아니다’를 원칙으로 한다.",a:true,e:"1944년 필라델피아 선언의 첫 원칙입니다."},
+ {q:"사용자는 정당한 이유 없이 노동조합의 교섭 요구를 거부할 수 있다.",a:false,e:"정당한 이유 없는 교섭 거부는 부당노동행위입니다(노동조합법 제81조)."},
+ {q:"유엔 아동권리협약은 아동을 경제적 착취로부터 보호할 것을 규정한다.",a:true,e:"제32조입니다. 대한민국은 1991년 비준했습니다."},
+ {q:"5월 1일 노동절은 미국 시카고의 8시간 노동 투쟁에서 비롯되었다.",a:true,e:"1886년 5월 1일 총파업이 기원입니다. 우리나라는 2026년부터 법정 명칭이 ‘노동절’입니다."},
+ {q:"대한민국 헌법에 노동3권이 처음 들어간 것은 1987년이다.",a:false,e:"1948년 제헌헌법부터 근로의 권리와 노동3권이 있었습니다."}
+],
+s8:[
+ {q:"계약서 제목이 ‘프리랜서 계약’이면 근로자가 될 수 없다.",a:false,e:"근로자 여부는 계약서 제목이 아니라 지휘·감독, 시간·장소 지정 등 실질로 판단합니다."},
+ {q:"배달 라이더는 노무제공자로서 산재보험이 적용된다.",a:true,e:"근로기준법은 적용되지 않더라도 산재보험과 고용보험은 노무제공자로서 적용됩니다."},
+ {q:"원동기장치자전거 면허는 16세부터 취득할 수 있다.",a:true,e:"도로교통법상 16세 이상입니다. 면허 없이 배달하면 무면허 운전입니다."},
+ {q:"노무제공자에게도 근로기준법의 주휴수당이 적용된다.",a:false,e:"주휴수당은 근로기준법상 근로자에게 적용됩니다. 노무제공자는 산재·고용보험 등 별도 보호를 받습니다."},
+ {q:"여러 배달앱에서 동시에 일하면 산재보험이 적용되지 않는다.",a:false,e:"2023년 7월 전속성 요건이 폐지되어 여러 플랫폼에서 일해도 적용됩니다."},
+ {q:"현금 수거 알바를 하다 적발되어도 ‘몰랐다’고 하면 처벌받지 않는다.",a:false,e:"보이스피싱 수거책은 사기 공범으로 처벌됩니다. 미성년자도 예외가 아닙니다."},
+ {q:"쓰지 않는 통장을 빌려주고 돈을 받는 것은 범죄다.",a:true,e:"전자금융거래법 위반입니다. 내 계좌가 범죄 수익 통로가 됩니다."},
+ {q:"일자리를 얻으려면 먼저 보증금을 내라는 구인은 사기를 의심해야 한다.",a:true,e:"일을 하기 위해 돈을 먼저 내는 경우는 없습니다."},
+ {q:"대가를 받고 쓴 후기라도 ‘광고’ 표시는 하지 않아도 된다.",a:false,e:"경제적 대가를 받은 후기는 광고 표시를 해야 합니다(표시광고법)."},
+ {q:"근로자성은 지휘·감독, 근무시간·장소 지정 등 실질로 판단한다.",a:true,e:"대법원 판례의 기준입니다. ‘사용종속관계’가 핵심입니다."}
+],
+s9:[
+ {q:"고등학생이라는 이유로 최저임금보다 적게 줄 수 있다.",a:false,e:"최저임금은 나이와 관계없이 적용됩니다. 연령 차별이자 최저임금법 위반입니다."},
+ {q:"이주노동자에게도 최저임금과 근로기준법이 똑같이 적용된다.",a:true,e:"근로기준법 제6조는 국적을 이유로 한 차별을 금지합니다."},
+ {q:"근로기준법 제6조 균등처우 조항은 5인 이상 사업장에만 적용된다.",a:false,e:"모든 사업장에 적용됩니다."},
+ {q:"같은 일을 하는데 성별을 이유로 시급에 차이를 두면 위법이다.",a:true,e:"근로기준법 제6조와 남녀고용평등법 제8조(동일가치노동 동일임금) 위반입니다."},
+ {q:"단시간 근로자라는 이유로 식대를 주지 않는 것은 어떤 경우에도 가능하다.",a:false,e:"합리적 이유 없는 차별적 처우는 기간제 및 단시간근로자 보호법 제8조 위반입니다(5인 이상)."},
+ {q:"손님이 폭언하면 고객응대근로자는 업무 중단이나 전환을 요구할 수 있다.",a:true,e:"산업안전보건법 제41조. 사업주는 이를 이유로 불이익을 줄 수 없습니다."},
+ {q:"‘손님이니까 참아’라는 사업주의 태도는 법 위반이 될 수 있다.",a:true,e:"고객 폭언 시 사업주는 근로자를 업무에서 빼고 휴식·치료를 지원할 의무가 있습니다."},
+ {q:"미등록 체류 외국인은 일한 임금을 받을 권리가 없다.",a:false,e:"체류 자격과 관계없이 일한 임금과 산재 보상은 보장됩니다."},
+ {q:"사업주는 고객에게 폭언을 하지 말라는 안내 문구나 음성을 제공해야 한다.",a:true,e:"고객응대근로자 보호 조치의 하나입니다(2018년 10월 시행)."},
+ {q:"장애를 이유로 채용에서 배제해도 위법이 아니다.",a:false,e:"장애인차별금지법 위반입니다. 정당한 편의 제공을 거부하는 것도 차별입니다."}
+],
+s10:[
+ {q:"18세 미만은 합의해도 하루 8시간을 넘겨 일할 수 없다.",a:true,e:"원칙 7시간, 합의 시 1시간 연장이 상한입니다(2차시)."},
+ {q:"근로계약서를 쓰지 않았으면 일한 임금도 받을 수 없다.",a:false,e:"계약은 성립했고 임금은 전액 받습니다. 미작성은 사용자 처벌 사유입니다(3차시)."},
+ {q:"2026년 최저임금은 시급 10,320원이다.",a:true,e:"월 환산액 2,156,880원(4차시)."},
+ {q:"1주 12시간 일해도 주휴수당을 받는다.",a:false,e:"주휴수당은 1주 15시간 이상일 때 발생합니다(4차시)."},
+ {q:"사업주가 산재보험에 가입하지 않았으면 보상을 받을 수 없다.",a:false,e:"산재보험은 모든 사업장에 자동 적용됩니다(5차시)."},
+ {q:"그만둔 뒤 임금은 한 달 안에만 주면 된다.",a:false,e:"퇴직 후 14일 이내입니다(6차시)."},
+ {q:"3개월 미만 일한 근로자에게는 해고예고 규정이 적용되지 않는다.",a:true,e:"근로기준법 제26조 단서입니다(6차시)."},
+ {q:"노동3권은 헌법 제33조에 규정되어 있다.",a:true,e:"단결권·단체교섭권·단체행동권(7차시)."},
+ {q:"배달 라이더는 근로자가 아니므로 산재보험을 받을 수 없다.",a:false,e:"노무제공자로서 산재보험이 적용됩니다(8차시)."},
+ {q:"손님이 한 성희롱은 사업주와 무관하다.",a:false,e:"사업주는 보호 조치를 해야 합니다(6·9차시)."}
+]
+};
+</script>
+<!-- OX_DATA:end -->
+<script>
+(function(){
+  Object.keys(OX_DATA).forEach(function(set){
+    var ol = document.querySelector('.wsox[data-set="'+set+'"]'); if(!ol) return;
+    ol.innerHTML = OX_DATA[set].map(function(it,i){
+      return '<li><span><span class="i">'+(i+1)+'.</span>'+it.q+'</span><span class="box"><span class="'+(it.a?'k':'')+'">O</span><span class="'+(it.a?'':'k')+'">X</span></span></li>';
+    }).join('');
+  });
+  document.getElementById('ansToggle').addEventListener('change', function(e){ document.body.classList.toggle('show-ans', e.target.checked); });
+  document.getElementById('printAll').addEventListener('click', function(){ window.print(); });
+})();
+</script>
+</body>
+</html>

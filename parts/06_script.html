@@ -1,0 +1,313 @@
+
+<style>
+body.teacher .ws .blank .a{opacity:1}
+body.teacher .ws .wsox .box span.k{background:var(--primary);color:var(--primary-ink);border-color:var(--primary)}
+</style>
+<!-- OX_DATA:start -->
+<script id="oxdata">
+const OX_DATA = {
+s1:[
+ {q:"아르바이트생은 근로기준법상 근로자가 아니다.",a:false,e:"직업 종류와 관계없이 임금을 목적으로 일하면 모두 근로자입니다(근로기준법 제2조). 알바생, 수습, 하루 알바도 포함됩니다."},
+ {q:"집안일이나 동생 돌보기도 노동이다.",a:true,e:"임금을 받지 않아도 생활에 필요한 것을 만드는 활동은 노동입니다. 가사·돌봄노동은 보이지 않는 노동의 대표 사례입니다."},
+ {q:"헌법은 ‘연소자의 근로는 특별한 보호를 받는다’고 직접 규정한다.",a:true,e:"헌법 제32조 제5항입니다. 이 조항 때문에 근로기준법에 18세 미만 보호 조항이 따로 있습니다."},
+ {q:"노동3권은 노동조합에 가입한 사람만 누릴 수 있다.",a:false,e:"헌법 제33조는 ‘근로자’ 모두에게 단결권·단체교섭권·단체행동권을 보장합니다. 가입 여부와 관계없는 헌법상 권리입니다."},
+ {q:"최저임금제는 헌법에 근거를 둔 제도다.",a:true,e:"헌법 제32조 제1항이 국가에 최저임금제 시행 의무를 지웁니다."},
+ {q:"편의점 점장은 사업주가 아니므로 ‘사용자’가 아니다.",a:false,e:"근로자에 관한 사항에 대해 사업주를 위해 행위하는 사람(점장, 매니저)도 근로기준법상 사용자입니다."},
+ {q:"‘근로’와 ‘노동’은 법적으로 전혀 다른 개념이다.",a:false,e:"같은 뜻입니다. 법률 용어로 ‘근로’를 쓰고 일상과 헌법 제33조 등에서 ‘노동’을 씁니다."},
+ {q:"근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정해야 한다.",a:true,e:"헌법 제32조 제3항입니다. 근로기준법이 그 법률입니다."},
+ {q:"하루만 일하고 그만둔 사람은 근로자가 아니다.",a:false,e:"근로 기간의 길이는 근로자 여부와 관계없습니다. 하루 일한 임금도 전액 받을 권리가 있습니다."},
+ {q:"노동인권에는 안전하게 일할 권리와 쉴 권리가 포함된다.",a:true,e:"정당한 임금, 안전, 휴식, 차별받지 않을 권리, 단결할 권리가 모두 노동인권입니다."}
+],
+s2:[
+ {q:"15세 미만은 어떤 경우에도 일할 수 없다.",a:false,e:"13세 이상 15세 미만은 고용노동부의 취직인허증을 받으면 일할 수 있습니다. 예술공연 참가는 13세 미만도 가능합니다."},
+ {q:"18세 미만의 근로시간은 원칙적으로 1일 7시간, 1주 35시간이다.",a:true,e:"근로기준법 제69조입니다. 합의하면 1일 1시간, 1주 5시간까지만 연장할 수 있습니다."},
+ {q:"당사자가 합의하면 18세 미만도 하루 10시간 일할 수 있다.",a:false,e:"합의해도 하루 8시간, 1주 40시간이 상한입니다."},
+ {q:"밤 10시 이후 근로는 본인이 동의하면 가능하다.",a:false,e:"본인 동의에 더해 고용노동부장관의 인가가 있어야 합니다(제70조 제2항)."},
+ {q:"사용자는 18세 미만 근로자의 친권자 동의서를 사업장에 갖춰 두어야 한다.",a:true,e:"가족관계기록사항에 관한 증명서와 친권자(후견인) 동의서를 비치해야 합니다(제66조)."},
+ {q:"부모가 자녀 대신 근로계약을 체결할 수 있다.",a:false,e:"친권자나 후견인은 미성년자의 근로계약을 대리할 수 없습니다(제67조 제1항). 동의와 대리는 다릅니다."},
+ {q:"노래연습장은 청소년이 손님으로 들어갈 수 있으므로 아르바이트도 할 수 있다.",a:false,e:"노래연습장은 청소년 보호법상 청소년 출입·고용 금지 업소입니다(청소년실 제외). 출입 가능과 고용 가능은 다릅니다."},
+ {q:"중학교에 재학 중인 15세는 취직인허증 없이 일할 수 있다.",a:false,e:"중학교 재학 중인 18세 미만은 15세 미만과 같이 취급되어 취직인허증이 필요합니다(제64조)."},
+ {q:"18세 미만을 유해하거나 위험한 사업에 쓰면 사용자가 처벌받는다.",a:true,e:"제65조 위반으로 3년 이하 징역 또는 3천만원 이하 벌금입니다."},
+ {q:"고용 금지 업소에서 일한 청소년도 일한 만큼의 임금은 받을 수 있다.",a:true,e:"처벌은 사업주가 받고, 근로자는 일한 시간에 대한 임금을 전액 받을 권리가 있습니다."}
+],
+s3:[
+ {q:"근로계약서를 쓰지 않았다면 근로계약도 성립하지 않은 것이다.",a:false,e:"말로 약속하고 일을 시작했으면 근로계약은 성립합니다. 서면 미작성은 사용자가 처벌받는 별개의 문제입니다."},
+ {q:"18세 미만에게 근로조건을 서면으로 교부하지 않은 사용자는 500만원 이하 벌금을 받는다.",a:true,e:"근로기준법 제67조 제3항 위반, 제114조에 따라 500만원 이하 벌금입니다."},
+ {q:"‘지각 1회당 1만원 공제’ 조항에 서명했으면 그 조항은 유효하다.",a:false,e:"위약금이나 손해배상액을 미리 정하는 계약은 금지됩니다(제20조). 서명했어도 무효입니다."},
+ {q:"임금은 매월 1회 이상 정해진 날짜에 지급해야 한다.",a:true,e:"임금 지급 4원칙 중 정기 지급 원칙입니다(제43조 제2항)."},
+ {q:"근로계약서는 사업장에서만 보관하면 충분하다.",a:false,e:"2부를 작성해 1부를 근로자에게 교부해야 합니다. 18세 미만에게는 교부가 법적 의무입니다."},
+ {q:"시급이 최저임금보다 낮게 적힌 계약서에 서명했다면 그 시급대로 받아야 한다.",a:false,e:"최저임금에 못 미치는 부분은 무효이고 최저임금만큼 받아야 합니다(최저임금법 제6조)."},
+ {q:"근로계약서에는 휴일과 소정근로시간을 반드시 적어야 한다.",a:true,e:"임금, 소정근로시간, 휴일, 연차유급휴가 등은 필수 기재사항입니다(제17조)."},
+ {q:"주휴수당을 시급에 포함해 지급하는 것은 어떤 경우에도 불법이다.",a:false,e:"기본시급이 최저임금 이상이고, 주휴수당 금액과 계산 근거가 계약서에 명시되어 있으면 가능합니다. 명시 없이 ‘포함’이라고만 하면 문제입니다."},
+ {q:"갑자기 그만둔 근로자에게는 마지막 달 임금을 주지 않아도 된다.",a:false,e:"임금 전액 지급 원칙 위반입니다. 일한 시간의 임금은 전액, 퇴직 후 14일 안에 지급해야 합니다."},
+ {q:"고용노동부 표준근로계약서가 아니라 사업장 자체 양식을 써도 된다.",a:true,e:"필수 기재사항이 모두 들어 있으면 양식은 자유입니다. 다만 표준 양식을 쓰면 누락을 막기 쉽습니다."}
+],
+s4:[
+ {q:"2026년 최저임금은 시급 10,320원이다.",a:true,e:"2025년 10,030원에서 2.9% 인상되었습니다. 월 환산액(209시간)은 2,156,880원입니다."},
+ {q:"최저임금은 성인에게만 적용되고 청소년은 더 적게 줄 수 있다.",a:false,e:"최저임금은 나이, 국적, 고용 형태와 관계없이 모든 근로자에게 적용됩니다."},
+ {q:"1주 12시간 일하는 알바생은 주휴수당을 받을 수 없다.",a:true,e:"주휴수당은 1주 소정근로시간 15시간 이상일 때 발생합니다."},
+ {q:"주휴수당은 5인 미만 사업장에는 적용되지 않는다.",a:false,e:"주휴일과 주휴수당은 사업장 규모와 관계없이 적용됩니다."},
+ {q:"5인 미만 사업장은 야간근로 가산수당(50%)을 줄 의무가 없다.",a:true,e:"연장·야간·휴일 가산수당(제56조)은 상시 5인 이상 사업장에만 적용됩니다. 다만 18세 미만의 야간근로 자체는 인가 없이는 금지입니다."},
+ {q:"편의점 아르바이트는 수습 3개월 동안 최저임금의 90%만 줘도 된다.",a:false,e:"수습 감액은 1년 이상 계약일 때만 가능하고, 편의점처럼 단순노무 업무는 1년 계약이어도 감액할 수 없습니다."},
+ {q:"미성년자의 임금은 부모 계좌로 보내도 된다.",a:false,e:"임금은 근로자 본인에게 직접 지급해야 합니다(제43조). 미성년자도 독자적으로 임금을 청구합니다(제68조)."},
+ {q:"임금명세서는 5인 이상 사업장만 교부하면 된다.",a:false,e:"임금명세서 교부(제48조 제2항)는 모든 사업장의 의무입니다. 문자나 앱으로 줘도 됩니다."},
+ {q:"1주 20시간 일하고 개근하면 주휴수당은 시급 4시간분이다.",a:true,e:"(20 ÷ 40) × 8 = 4시간. 시급 10,320원이면 41,280원입니다."},
+ {q:"휴게시간은 근로시간이 아니므로 임금을 지급하지 않아도 된다.",a:true,e:"휴게시간은 무급입니다. 다만 자유롭게 쓸 수 없는 대기시간은 근로시간이므로 임금을 줘야 합니다."}
+],
+s5:[
+ {q:"하루 6시간 근무하면 최소 30분의 휴게시간을 받아야 한다.",a:true,e:"4시간 이상이면 30분, 8시간 이상이면 1시간 이상입니다(제54조)."},
+ {q:"휴게시간에도 손님이 오면 응대해야 한다면 그 시간은 휴게시간이 아니다.",a:true,e:"휴게시간은 자유롭게 이용할 수 있어야 합니다. 대기 상태는 근로시간입니다."},
+ {q:"사업주가 산재보험에 가입하지 않았으면 산재 보상을 받을 수 없다.",a:false,e:"산재보험은 모든 사업장에 자동 적용됩니다. 사업주 미가입·보험료 미납과 관계없이 근로복지공단이 보상합니다."},
+ {q:"내 실수로 다쳤으면 산재가 아니다.",a:false,e:"산재보험은 근로자의 과실을 따지지 않습니다. 업무와 관련해 다쳤으면 보상됩니다."},
+ {q:"통상적인 경로로 출근하다 당한 교통사고는 산재가 아니다.",a:false,e:"2018년부터 통상적인 경로와 방법의 출퇴근 재해도 업무상 재해로 인정됩니다."},
+ {q:"산재 휴업급여는 평균임금의 70%다.",a:true,e:"치료 때문에 일하지 못한 기간에 평균임금의 70%를 받습니다. 최저임금 수준이 하한입니다."},
+ {q:"일한 지 하루 만에 다쳐도 산재보험이 적용된다.",a:true,e:"근로 기간과 관계없이 적용됩니다."},
+ {q:"급박한 위험이 있어 작업을 중지하고 대피했다는 이유로 해고할 수 없다.",a:true,e:"산업안전보건법 제52조. 작업중지·대피를 이유로 한 불이익 처우는 금지됩니다."},
+ {q:"산재 신청서에는 사업주의 확인 서명이 반드시 있어야 한다.",a:false,e:"사업주 확인 없이도 근로자가 직접 근로복지공단에 신청할 수 있습니다."},
+ {q:"사업주가 치료비를 주겠다며 합의하자고 하면 바로 서명하는 것이 유리하다.",a:false,e:"‘공상 처리’는 후유증과 휴업급여를 놓치기 쉽습니다. 서명 전에 1644-3119에 상담하세요."}
+],
+s6:[
+ {q:"퇴직하면 임금은 14일 이내에 전부 지급해야 한다.",a:true,e:"금품 청산 의무(제36조)입니다. 당사자 합의로 연장할 수는 있습니다."},
+ {q:"임금체불은 1년 안에 신고하지 않으면 받을 수 없다.",a:false,e:"임금채권의 소멸시효는 3년입니다(제49조)."},
+ {q:"미성년자는 부모 없이 혼자서 임금체불 진정을 할 수 없다.",a:false,e:"미성년자는 독자적으로 임금을 청구할 수 있습니다(제68조). 노동포털에서 본인이 진정할 수 있습니다."},
+ {q:"2개월 일한 알바생을 당일 해고하면 해고예고수당을 줘야 한다.",a:false,e:"계속 근로 3개월 미만인 근로자는 해고예고 적용 제외입니다(제26조). 다만 일한 임금은 전액 지급해야 하고, 5인 이상이면 부당해고를 다툴 수 있습니다."},
+ {q:"카톡으로 ‘내일부터 나오지 마’라고 보낸 것은 해고가 아니다.",a:false,e:"방법과 관계없이 사용자의 일방적 근로관계 종료는 해고입니다. 5인 이상 사업장은 서면 통지가 없으면 효력이 없습니다."},
+ {q:"부당해고 구제신청은 5인 이상 사업장에서 해고일부터 3개월 안에 노동위원회에 한다.",a:true,e:"근로기준법 제28조입니다. 5인 미만 사업장은 구제신청 대상이 아닙니다."},
+ {q:"손님이 한 성희롱은 사업주 책임이 아니다.",a:false,e:"고객 성희롱에 대해 사업주는 근무 장소 변경 등 보호 조치를 해야 합니다(남녀고용평등법 제14조의2)."},
+ {q:"직장 내 괴롭힘 금지 조항은 모든 사업장에 적용된다.",a:false,e:"근로기준법 제76조의2는 5인 이상 사업장에 적용됩니다. 5인 미만에서도 폭행은 금지(제8조)되고 모욕·협박은 형법으로 대응합니다."},
+ {q:"내가 대화 당사자인 통화를 녹음한 파일은 증거로 쓸 수 있다.",a:true,e:"대화 당사자의 녹음은 통신비밀보호법 위반이 아니며 진정·소송에서 증거가 됩니다."},
+ {q:"사업주가 끝내 임금을 주지 못하면 국가가 일부를 대신 지급하는 제도가 있다.",a:true,e:"간이대지급금 제도입니다. 최종 3개월 임금과 3년 퇴직금을 합쳐 최대 1,000만원까지 받을 수 있습니다."}
+],
+s7:[
+ {q:"1833년 영국 공장법은 9세 미만 아동의 고용을 금지했다.",a:true,e:"최초의 아동노동 규제로, 9~13세는 하루 9시간으로 제한했습니다."},
+ {q:"전태일은 1970년 ‘근로기준법을 준수하라’고 외쳤다.",a:true,e:"1970년 11월 13일 평화시장. 이후 노동 문제가 사회 의제가 되었습니다."},
+ {q:"노동3권은 단결권, 단체교섭권, 단체휴가권이다.",a:false,e:"단결권, 단체교섭권, 단체행동권입니다(헌법 제33조)."},
+ {q:"아르바이트생은 노동조합에 가입할 수 없다.",a:false,e:"근로자라면 누구나 노조를 만들거나 가입할 수 있습니다. 청년유니온·알바노조처럼 사업장에 매이지 않는 노조도 있습니다."},
+ {q:"우리나라 최저임금제는 1988년에 시행되었다.",a:true,e:"첫 최저시급은 462.5원이었습니다."},
+ {q:"ILO는 1919년 창설되었고 ‘노동은 상품이 아니다’를 원칙으로 한다.",a:true,e:"1944년 필라델피아 선언의 첫 원칙입니다."},
+ {q:"사용자는 정당한 이유 없이 노동조합의 교섭 요구를 거부할 수 있다.",a:false,e:"정당한 이유 없는 교섭 거부는 부당노동행위입니다(노동조합법 제81조)."},
+ {q:"유엔 아동권리협약은 아동을 경제적 착취로부터 보호할 것을 규정한다.",a:true,e:"제32조입니다. 대한민국은 1991년 비준했습니다."},
+ {q:"5월 1일 노동절은 미국 시카고의 8시간 노동 투쟁에서 비롯되었다.",a:true,e:"1886년 5월 1일 총파업이 기원입니다. 우리나라는 2026년부터 법정 명칭이 ‘노동절’입니다."},
+ {q:"대한민국 헌법에 노동3권이 처음 들어간 것은 1987년이다.",a:false,e:"1948년 제헌헌법부터 근로의 권리와 노동3권이 있었습니다."}
+],
+s8:[
+ {q:"계약서 제목이 ‘프리랜서 계약’이면 근로자가 될 수 없다.",a:false,e:"근로자 여부는 계약서 제목이 아니라 지휘·감독, 시간·장소 지정 등 실질로 판단합니다."},
+ {q:"배달 라이더는 노무제공자로서 산재보험이 적용된다.",a:true,e:"근로기준법은 적용되지 않더라도 산재보험과 고용보험은 노무제공자로서 적용됩니다."},
+ {q:"원동기장치자전거 면허는 16세부터 취득할 수 있다.",a:true,e:"도로교통법상 16세 이상입니다. 면허 없이 배달하면 무면허 운전입니다."},
+ {q:"노무제공자에게도 근로기준법의 주휴수당이 적용된다.",a:false,e:"주휴수당은 근로기준법상 근로자에게 적용됩니다. 노무제공자는 산재·고용보험 등 별도 보호를 받습니다."},
+ {q:"여러 배달앱에서 동시에 일하면 산재보험이 적용되지 않는다.",a:false,e:"2023년 7월 전속성 요건이 폐지되어 여러 플랫폼에서 일해도 적용됩니다."},
+ {q:"현금 수거 알바를 하다 적발되어도 ‘몰랐다’고 하면 처벌받지 않는다.",a:false,e:"보이스피싱 수거책은 사기 공범으로 처벌됩니다. 미성년자도 예외가 아닙니다."},
+ {q:"쓰지 않는 통장을 빌려주고 돈을 받는 것은 범죄다.",a:true,e:"전자금융거래법 위반입니다. 내 계좌가 범죄 수익 통로가 됩니다."},
+ {q:"일자리를 얻으려면 먼저 보증금을 내라는 구인은 사기를 의심해야 한다.",a:true,e:"일을 하기 위해 돈을 먼저 내는 경우는 없습니다."},
+ {q:"대가를 받고 쓴 후기라도 ‘광고’ 표시는 하지 않아도 된다.",a:false,e:"경제적 대가를 받은 후기는 광고 표시를 해야 합니다(표시광고법)."},
+ {q:"근로자성은 지휘·감독, 근무시간·장소 지정 등 실질로 판단한다.",a:true,e:"대법원 판례의 기준입니다. ‘사용종속관계’가 핵심입니다."}
+],
+s9:[
+ {q:"고등학생이라는 이유로 최저임금보다 적게 줄 수 있다.",a:false,e:"최저임금은 나이와 관계없이 적용됩니다. 연령 차별이자 최저임금법 위반입니다."},
+ {q:"이주노동자에게도 최저임금과 근로기준법이 똑같이 적용된다.",a:true,e:"근로기준법 제6조는 국적을 이유로 한 차별을 금지합니다."},
+ {q:"근로기준법 제6조 균등처우 조항은 5인 이상 사업장에만 적용된다.",a:false,e:"모든 사업장에 적용됩니다."},
+ {q:"같은 일을 하는데 성별을 이유로 시급에 차이를 두면 위법이다.",a:true,e:"근로기준법 제6조와 남녀고용평등법 제8조(동일가치노동 동일임금) 위반입니다."},
+ {q:"단시간 근로자라는 이유로 식대를 주지 않는 것은 어떤 경우에도 가능하다.",a:false,e:"합리적 이유 없는 차별적 처우는 기간제 및 단시간근로자 보호법 제8조 위반입니다(5인 이상)."},
+ {q:"손님이 폭언하면 고객응대근로자는 업무 중단이나 전환을 요구할 수 있다.",a:true,e:"산업안전보건법 제41조. 사업주는 이를 이유로 불이익을 줄 수 없습니다."},
+ {q:"‘손님이니까 참아’라는 사업주의 태도는 법 위반이 될 수 있다.",a:true,e:"고객 폭언 시 사업주는 근로자를 업무에서 빼고 휴식·치료를 지원할 의무가 있습니다."},
+ {q:"미등록 체류 외국인은 일한 임금을 받을 권리가 없다.",a:false,e:"체류 자격과 관계없이 일한 임금과 산재 보상은 보장됩니다."},
+ {q:"사업주는 고객에게 폭언을 하지 말라는 안내 문구나 음성을 제공해야 한다.",a:true,e:"고객응대근로자 보호 조치의 하나입니다(2018년 10월 시행)."},
+ {q:"장애를 이유로 채용에서 배제해도 위법이 아니다.",a:false,e:"장애인차별금지법 위반입니다. 정당한 편의 제공을 거부하는 것도 차별입니다."}
+],
+s10:[
+ {q:"18세 미만은 합의해도 하루 8시간을 넘겨 일할 수 없다.",a:true,e:"원칙 7시간, 합의 시 1시간 연장이 상한입니다(2차시)."},
+ {q:"근로계약서를 쓰지 않았으면 일한 임금도 받을 수 없다.",a:false,e:"계약은 성립했고 임금은 전액 받습니다. 미작성은 사용자 처벌 사유입니다(3차시)."},
+ {q:"2026년 최저임금은 시급 10,320원이다.",a:true,e:"월 환산액 2,156,880원(4차시)."},
+ {q:"1주 12시간 일해도 주휴수당을 받는다.",a:false,e:"주휴수당은 1주 15시간 이상일 때 발생합니다(4차시)."},
+ {q:"사업주가 산재보험에 가입하지 않았으면 보상을 받을 수 없다.",a:false,e:"산재보험은 모든 사업장에 자동 적용됩니다(5차시)."},
+ {q:"그만둔 뒤 임금은 한 달 안에만 주면 된다.",a:false,e:"퇴직 후 14일 이내입니다(6차시)."},
+ {q:"3개월 미만 일한 근로자에게는 해고예고 규정이 적용되지 않는다.",a:true,e:"근로기준법 제26조 단서입니다(6차시)."},
+ {q:"노동3권은 헌법 제33조에 규정되어 있다.",a:true,e:"단결권·단체교섭권·단체행동권(7차시)."},
+ {q:"배달 라이더는 근로자가 아니므로 산재보험을 받을 수 없다.",a:false,e:"노무제공자로서 산재보험이 적용됩니다(8차시)."},
+ {q:"손님이 한 성희롱은 사업주와 무관하다.",a:false,e:"사업주는 보호 조치를 해야 합니다(6·9차시)."}
+]
+};
+</script>
+<!-- OX_DATA:end -->
+<script>
+(function(){
+  'use strict';
+  var VIEWS = ['home','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','guide'];
+  var inFrame = (function(){ try { return window.self !== window.top; } catch(e){ return true; } })();
+  function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
+
+  /* ---------- 보기 모드 ---------- */
+  var bS = document.getElementById('modeStudent'), bT = document.getElementById('modeTeacher');
+  function setMode(t){
+    document.body.classList.toggle('teacher', t);
+    bS.setAttribute('aria-pressed', String(!t)); bT.setAttribute('aria-pressed', String(t));
+    store('lhr-mode', t ? 'teacher' : 'student');
+  }
+  bS.addEventListener('click', function(){ setMode(false); });
+  bT.addEventListener('click', function(){ setMode(true); });
+  setMode(store('lhr-mode') === 'teacher');
+
+  /* ---------- 라우팅 ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('#nav a'));
+  function show(id){
+    if (VIEWS.indexOf(id) < 0) id = 'home';
+    VIEWS.forEach(function(v){
+      var el = document.getElementById('view-' + v);
+      if (el) el.hidden = (v !== id);
+    });
+    navLinks.forEach(function(a){
+      var is = a.getAttribute('href') === '#' + id;
+      if (is) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+      if (is && window.innerWidth <= 900 && a.scrollIntoView) { try { a.scrollIntoView({block:'nearest', inline:'center'}); } catch(e){} }
+    });
+    window.scrollTo(0,0);
+    document.title = (id==='home' ? '' : (document.querySelector('#view-'+id+' h1')||{}).textContent + ' · ') + '청소년 노동인권 10차시';
+  }
+  function route(){ show((location.hash || '#home').replace('#','')); }
+  window.addEventListener('hashchange', route);
+  route();
+
+  /* ---------- 학습 완료 ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('input[data-done]'), function(cb){
+    var k = 'lhr-done-' + cb.dataset.done;
+    cb.checked = store(k) === '1';
+    var link = document.querySelector('#nav a[href="#' + cb.dataset.done + '"]');
+    function paint(){ if (link) link.classList.toggle('done', cb.checked); }
+    paint();
+    cb.addEventListener('change', function(){ store(k, cb.checked ? '1' : '0'); paint(); });
+  });
+
+  /* ---------- OX 퀴즈 ---------- */
+  function shuffle(arr){ var a = arr.slice(); for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+  function renderWsOx(set, n){
+    Array.prototype.forEach.call(document.querySelectorAll('.wsox[data-set="'+set+'"]'), function(ol){
+      var items = (OX_DATA[set]||[]).slice(0, n);
+      ol.innerHTML = items.map(function(it, i){
+        return '<li><span><span class="i">'+(i+1)+'.</span>'+it.q+'</span><span class="box"><span class="'+(it.a?'k':'')+'">O</span><span class="'+(it.a?'':'k')+'">X</span></span></li>';
+      }).join('');
+    });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.oxwrap[data-set]'), function(wrap){
+    var set = wrap.dataset.set, data = OX_DATA[set] || [];
+    var state = { n: 10, shuffle: false, order: data.map(function(_,i){return i;}), answered: {} };
+    var ctl = document.createElement('div'); ctl.className = 'oxctl';
+    ctl.innerHTML = '<label>문항 수 <select class="ox-n"><option value="5">5문항</option><option value="7">7문항</option><option value="10" selected>10문항</option></select></label>'
+      + '<label><input type="checkbox" class="ox-sh"> 순서 섞기</label>'
+      + '<button type="button" class="btn ox-reset">다시 풀기</button>'
+      + '<span class="score">0 / 10</span>';
+    var list = document.createElement('ol'); list.className = 'oxlist';
+    wrap.appendChild(ctl); wrap.appendChild(list);
+    var selN = ctl.querySelector('.ox-n'), chk = ctl.querySelector('.ox-sh'), score = ctl.querySelector('.score');
+    function render(){
+      state.answered = {};
+      var idx = state.shuffle ? shuffle(state.order) : state.order.slice();
+      idx = idx.slice(0, state.n);
+      list.innerHTML = idx.map(function(k, i){
+        var it = data[k];
+        return '<li class="ox" data-k="'+k+'"><span class="st"><span class="i">'+(i+1)+'</span>'+it.q+'</span>'
+          + '<span class="ob"><button type="button" data-v="1" aria-label="O">O</button><button type="button" data-v="0" aria-label="X">X</button></span></li>';
+      }).join('');
+      updateScore();
+      renderWsOx(set, state.n);
+    }
+    function updateScore(){
+      var c = 0, t = 0; for (var k in state.answered){ t++; if (state.answered[k]) c++; }
+      score.textContent = c + ' / ' + state.n + (t === state.n && t>0 ? (c===state.n ? ' · 전부 정답!' : '') : '');
+    }
+    list.addEventListener('click', function(ev){
+      var btn = ev.target.closest('button[data-v]'); if (!btn) return;
+      var li = btn.closest('.ox'); var k = li.dataset.k; if (state.answered.hasOwnProperty(k)) return;
+      var it = data[k], v = btn.dataset.v === '1', ok = (v === it.a);
+      state.answered[k] = ok;
+      btn.classList.add('sel', ok ? 'ok' : 'no');
+      if (!ok) { var ansBtn = li.querySelector('button[data-v="'+(it.a?'1':'0')+'"]'); ansBtn.classList.add('ans'); }
+      Array.prototype.forEach.call(li.querySelectorAll('button'), function(b){ b.disabled = true; });
+      var ex = document.createElement('div'); ex.className = 'ex' + (ok ? '' : ' no');
+      ex.innerHTML = '<b>' + (ok ? '정답' : '오답') + ' · 답은 ' + (it.a ? 'O' : 'X') + '</b>' + it.e;
+      li.appendChild(ex);
+      updateScore();
+    });
+    selN.addEventListener('change', function(){ state.n = parseInt(selN.value,10); render(); });
+    chk.addEventListener('change', function(){ state.shuffle = chk.checked; render(); });
+    ctl.querySelector('.ox-reset').addEventListener('click', render);
+    render();
+  });
+  // 퀴즈 블록이 없는 학습지(혹시 있을 경우)도 채움
+  Object.keys(OX_DATA).forEach(function(set){
+    Array.prototype.forEach.call(document.querySelectorAll('.wsox[data-set="'+set+'"]'), function(ol){ if (!ol.children.length) renderWsOx(set, 10); });
+  });
+
+  /* ---------- 체크리스트 ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll('.checklist'), function(ul){
+    var out = document.querySelector('[data-count-for="'+ul.id+'"]');
+    function upd(){ if (out) out.textContent = ul.querySelectorAll('input:checked').length; }
+    ul.addEventListener('change', upd); upd();
+  });
+
+  /* ---------- 임금 계산기 ---------- */
+  var calcIds = ['c-wage','c-hours','c-days','c-night','c-size','c-age'];
+  var out = document.getElementById('c-out');
+  function won(n){ return Math.round(n).toLocaleString('ko-KR') + '원'; }
+  function calc(){
+    if (!out) return;
+    var wage = +document.getElementById('c-wage').value || 0;
+    var hours = +document.getElementById('c-hours').value || 0;
+    var days = +document.getElementById('c-days').value || 0;
+    var night = Math.min(+document.getElementById('c-night').value || 0, hours);
+    var big = document.getElementById('c-size').value === 'big';
+    var minor = document.getElementById('c-age').value === 'minor';
+    var legalDay = minor ? 7 : 8;
+    var weekly = hours * days;
+    var base = weekly * wage;
+    var otHours = Math.max(0, hours - legalDay) * days;
+    var ot = big ? otHours * wage * 0.5 : 0;
+    var nt = big ? night * days * wage * 0.5 : 0;
+    var hol = 0, holNote = '';
+    if (weekly >= 15 && days > 0) { hol = Math.min(weekly, 40) / 40 * 8 * wage; holNote = '(' + Math.min(weekly,40) + ' ÷ 40) × 8 × ' + wage.toLocaleString('ko-KR'); }
+    else holNote = '1주 15시간 미만이라 발생하지 않음';
+    var total = base + ot + nt + hol;
+    var warns = [];
+    if (wage < 10320) warns.push('시급이 2026년 최저임금 10,320원보다 낮습니다. 최저임금 위반입니다.');
+    if (minor && hours > 8) warns.push('18세 미만은 합의해도 하루 8시간을 넘을 수 없습니다.');
+    if (minor && weekly > 40) warns.push('18세 미만은 합의해도 1주 40시간을 넘을 수 없습니다.');
+    if (minor && night > 0) warns.push('18세 미만의 야간근로(22~06시)는 본인 동의와 고용노동부장관 인가가 있어야 합니다.');
+    if (!big && (otHours > 0 || night > 0)) warns.push('5인 미만 사업장은 연장·야간 가산수당 의무가 없어 가산액을 0원으로 계산했습니다.');
+    out.innerHTML =
+      '<div class="row"><span>1주 근로시간</span><b>' + weekly + '시간</b></div>' +
+      '<div class="row"><span>기본급 (' + weekly + ' × ' + wage.toLocaleString('ko-KR') + ')</span><b>' + won(base) + '</b></div>' +
+      '<div class="row"><span>연장근로 가산 50% (' + otHours + '시간)</span><b>' + won(ot) + '</b></div>' +
+      '<div class="row"><span>야간근로 가산 50% (' + (night*days) + '시간)</span><b>' + won(nt) + '</b></div>' +
+      '<div class="row"><span>주휴수당 ' + holNote + '</span><b>' + won(hol) + '</b></div>' +
+      '<div class="row total"><span>1주 예상 임금</span><b>' + won(total) + '</b></div>' +
+      '<div class="row"><span>4주 기준 예상 (참고)</span><b>' + won(total*4) + '</b></div>' +
+      (warns.length ? '<div class="note">' + warns.map(function(w){ return '⚠ ' + w; }).join('<br>') + '</div>' : '') +
+      '<div class="note">전제: 소정근로일 개근, 휴게시간 제외, 소정근로일 근무는 휴일근로가 아님. 실제 임금은 근로계약서의 소정근로시간을 기준으로 계산됩니다.</div>';
+  }
+  calcIds.forEach(function(id){ var el = document.getElementById(id); if (el) el.addEventListener('input', calc); });
+  calc();
+
+  /* ---------- 인쇄 ---------- */
+  function doPrint(wsOnly){
+    if (wsOnly) document.body.classList.add('ws-print');
+    var after = function(){ document.body.classList.remove('ws-print'); window.removeEventListener('afterprint', after); };
+    window.addEventListener('afterprint', after);
+    try { window.print(); } catch(e) {}
+    setTimeout(after, 2000);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.ws-print-btn'), function(b){
+    if (inFrame) { b.hidden = true; return; }
+    b.addEventListener('click', function(){ doPrint(true); });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.page-print-btn'), function(b){
+    if (inFrame) { b.hidden = true; return; }
+    b.addEventListener('click', function(){ doPrint(false); });
+  });
+  if (inFrame) {
+    Array.prototype.forEach.call(document.querySelectorAll('.wsbar .hint'), function(h){
+      h.textContent = '미리보기 화면에서는 인쇄할 수 없습니다. index.html 또는 학습지모음.html 파일을 내려받아 브라우저에서 열면 인쇄 버튼이 나타납니다.';
+    });
+  }
+})();
+</script>
+</body>
+</html>
